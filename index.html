@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Market</title>
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="product-page">
+        <div class="overlay visible">
+            <div class="pop-up">
+                <h3 class= "pop-up__title">Выберите режим отображения пиццы</h3>
+                <div class="pop-up__buttons">
+                    <a href="#" class="pop-up__button pop-up__button--tile"> <span class='pop-up__icon icon-tile'></span> <span>в виде сетки</span> </a>
+                    <a href="#" class="pop-up__button pop-up__button--list"><span class='pop-up__icon icon-list'></span> <span>в виде списка</span> </a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <a href="/" class="header__logo">Pizza Market</a>
+            <h2 class="header__title">Меню</h2>
+        </header>
+        <main>
+            <div class="container">
+                <h1 class="products-page__title">
+                    Пицца
+                </h1>
+                <div class="navigation">
+                    <div>
+                        <span>Название</span>
+                        <select class='names-select'>
+                            <option value="none">----</option>
+                            <option value="namesToLow">В алфавитном порядке</option>
+                            <option value="namesToHigh">В обратном алфавитном порядке</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Цена</span>
+                        <select class='price-select'>
+                            <option value="none">----</option>
+                            <option value="priceToLow">От большей к меньшей</option>
+                            <option value="priceToHigh">От меньшей к большей</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="products-wrapper">
+                    <div class="products-filter">
+                        <h4 class="products-filter__ingredients">
+                            Ингредиенты
+                        </h4>
+                        <ul class="products-filter__ingredients-list">
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="huntingSausages" id='huntingSausages' class='products-filter__checkbox'><label>Колбаски охотничьи</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="tomatoSauce" id='tomatoSauce' class='products-filter__checkbox'><label>Cоус томатный</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="crimeanOnion" id='crimeanOnion' class='products-filter__checkbox'><label>лук крымский</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="olives" id='olives' class='products-filter__checkbox'><label>оливки</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="mozzarella" id='mozzarella' class='products-filter__checkbox'><label>сыр моцарелла</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="oregano" id='oregano' class='products-filter__checkbox'><label>орегано</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="parsley" id='parsley' class='products-filter__checkbox'><label>петрушка</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="pickledMushrooms" id='pickledMushrooms' class='products-filter__checkbox'><label>опята маринованные</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="creamSauce" id='creamSauce' class='products-filter__checkbox'><label>соус сливочный</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="champignon" id='champignon' class='products-filter__checkbox'><label>шампиньоны</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="chickenLeg" id='chickenLeg' class='products-filter__checkbox'><label>куриный окорок</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="pork" id='pork' class='products-filter__checkbox'><label>свинина</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="cherryTomato" id='cherryTomato' class='products-filter__checkbox'><label>помидоры черри</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="parmesanCheese" id='parmesanCheese' class='products-filter__checkbox'><label>сыр пармезан</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="basil" id='basil' class='products-filter__checkbox'><label>базилик</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="bacon" id='bacon' class='products-filter__checkbox'><label>бекон</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="sweetChiliSauce" id='sweetChiliSauce' class='products-filter__checkbox'><label>соус свит чили</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="pineapples" id='pineapples' class='products-filter__checkbox'><label>ананасы</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="bulgarianPepper" id='bulgarianPepper' class='products-filter__checkbox'><label>перец болгарский</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="ham" id='ham' class='products-filter__checkbox'><label>Ветчина</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="balyk" id='balyk' class='products-filter__checkbox'><label>Балык</label></li><br />
+                            <li class='products-filter__ingredients-item'><input type="checkbox" name="pepperoni" id='pepperoni' class='products-filter__checkbox'><label>Пепперони</label></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="products-list">
+
+                    </div>  
+                </div>             
+
+            </div>            
+        </main>
+
+    </section>
+    <script>
+        let arr = [{name: "Баварская", price: "135 грн", ingredients: {huntingSausages: 'колбаски охотничьи', tomatoSauce: "соус томатный", crimeanOnion: "лук крымский", 
+                    olives: "оливки", mozzarella: "сыр моцарелла", oregano: "орегано", parsley: "петрушка", pickledMushrooms: "опята маринованные" } , image: "../img/bavarskaya.jpg", calorie: "268 кал."}, 
+                  {name: "Мясная", price: "145 грн", ingredients: {creamSauce: "соус сливочный", champignon: "шампиньоны", chickenLeg: "куриный окорок", pork: "свинина",
+                  crimeanOnion: "лук крымский", cherryTomato: "помидоры черри", mozzarella: "сыр моцарелла", parmesanCheese: "сыр пармезан", oregano: "орегано", basil: "базилик"  }, image: "../img/meat.png",
+                  calorie: "266 кал."}, 
+                  {name: "Карбонара", price: "144 грн",  ingredients: {creamSauce: "соус сливочный", bacon: "бекон", crimeanOnion: "лук крымский", cherryTomato: "помидоры черри", 
+                  mozzarella: "сыр моцарелла", parmesanCheese: "сыр пармезан", oregano: "орегано", basil: "базилик"}, image: "../img/carbonara.jpg", calorie: "270 кал."}, 
+                  {name: "Свит чили со свининой", price: "143 грн", ingredients: {sweetChiliSauce: "соус свит чили", pork: "свинина", pineapples: "ананасы", bulgarianPepper: "перец болгарский",
+                  mozzarella: "сыр моцарелла", parmesanCheese: "сыр пармезан", oregano: "орегано", basil: "базилик" }, image: "../img/svitpork.jpg", calorie: "277 кал."}, 
+                  {name: "Чесночная с беконом", price: "119 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор", bacon: "бекон", garlic: "чеснок",
+                  parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/garlicbacon.jpg", calorie: "257 кал."}, 
+                  {name: "Свит чили с курицей", price: "140 грн", ingredients: {sweetChiliSauce: "соус свит чили", chickenLeg: "куриный окорок", pineapples: "ананасы", bulgarianPepper: "перец болгарский",
+                  mozzarella: "сыр моцарелла", parmesanCheese: "сыр пармезан", oregano: "орегано", basil: "базилик" }, image: "../img/svitchicken.jpg", calorie: "259 кал."}, 
+                  {name: "Маринара", price: "139 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор", chickenLeg: "куриный окорок",
+                  parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/marinara.jpg", calorie: "279 кал."},
+                  {name: "Квинта филона", price: "135 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор", bacon: "бекон", chickenLeg: "куриный окорок",
+                  olives: "оливки", parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/kvintafilona.jpg", calorie: "275 кал."},  
+                  {name: "С ананасами и ветчиной", price: "142 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла", ham: "ветчина", 
+                  olives: "оливки", pineapples: "ананасы",  parmesanCheese: "сыр пармезан", oregano: "орегано" }, image: "../img/pinappleham.jpg", calorie: "254 кал."}, 
+                  {name: "Итальяни", price: "165 грн", ingredients: {tomatoSauce: "соус томатный",tomato: "помидор", chickenLeg: "куриный окорок", mozzarella: "сыр моцарелла", ham: "ветчина", 
+                  bacon: "бекон", champignon: "шампиньоны", bulgarianPepper: "перец болгарский",  parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/italiani.jpg"
+                  , calorie: "281 кал."}, 
+                  {name: "Маргарита", price: "95 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла", tomato: "помидор", oregano: "орегано" }, image: "../img/margarita.jpg", calorie: "261 кал."}, 
+                  {name: "Капричоза", price: "135 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор", ham: "ветчина",
+                  parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/caprichosa.jpg", calorie: "284 кал."},  
+                  {name: "С балыком и беконом", price: "136 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор",bacon: "бекон", 
+                  balyk: "балык", parmesanCheese: "сыр пармезан", oregano: "орегано", parsley: "петрушка" }, image: "../img/balykbacon.jpg", calorie: "262 кал."},
+                  {name: "Реджина", price: "129 грн", ingredients: {creamSauce: "соус сливочный", champignon: "шампиньоны", chickenLeg: "куриный окорок",
+                  crimeanOnion: "лук крымский", mozzarella: "сыр моцарелла", parmesanCheese: "сыр пармезан", oregano: "орегано" }, image: "../img/regina.jpg", calorie: "273 кал."},
+                  {name: "Кальцоне с ветчиной", price: "118 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла",tomato: "помидор", ham: "ветчина",
+                  crimeanOnion: "лук крымский", oregano: "орегано", parsley: "петрушка" }, image: "../img/calcioneham.jpg", calorie: "278 кал."}, 
+                  {name: "Неаполитана", price: "137 грн", ingredients: {huntingSausages: 'колбаски охотничьи', tomatoSauce: "соус томатный", parmesanCheese: "сыр пармезан", 
+                  tomato: "помидор",  olives: "оливки", mozzarella: "сыр моцарелла", oregano: "орегано", parsley: "петрушка" }, image: "../img/napoli.jpg", calorie: "281 кал."}, 
+                  {name: "С курицей и ананасами", price: "141 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла", oregano: "орегано",
+                  chickenLeg: "куриный окорок", pineapples: "ананасы"}, image: "../img/chickenpinapple.jpg", calorie: "266 кал."},
+                  {name: "Пепперони", price: "138 грн", ingredients: {tomatoSauce: "соус томатный", mozzarella: "сыр моцарелла", oregano: "орегано",
+                  pepperoni: "пепперони", pineapples: "ананасы"}, image: "../img/pepperoni.jpg", calorie: "277 кал."}];
+
+        let productsList = document.querySelector('.product-list');
+        
+        let overlay = document.querySelector('.overlay');
+        let modal = document.querySelector('.pop-up');
+        let productsView = '';
+        modal.addEventListener('click', function(e){
+            e.preventDefault();  
+            if(e.target.closest('.pop-up__button--tile')){
+                productsView = 'tile';
+                overlay.classList.remove('visible');
+                renderProducts(arr, productsView);  
+            } else if(e.target.closest('.pop-up__button--list')){    
+                productsView = 'list';  
+                overlay.classList.remove('visible');
+                renderProducts(arr, productsView);       
+            }
+
+        });
+        function sortNamesToLow(arr){
+            arr.sort((a, b) => a.name.replace(/ /g, "") > b.name.replace(/ /g, "") ? 1 : -1);
+        }
+        function sortNamesToHigh(arr){
+            arr.sort((a, b) => a.name.replace(/ /g, "") < b.name.replace(/ /g, "") ? 1 : -1);
+        }
+        function sortPricesToHigh(arr){
+            arr.sort(function (a, b) {
+            if(typeof a.price === 'object'){
+                a = a.price.newUan;
+            } else if(typeof a.price === 'string'){
+                a = a.price;
+            } else {
+                alert("Некорректно заполнено поле цена");
+            }
+
+            if(typeof b.price === 'object'){
+                b = b.price.newUan;
+            } else if(typeof b.price === 'string'){
+                b = b.price;                
+            } else {
+                alert("Некорректно заполнено поле цена");
+            }
+            return +a.replace(/\D/g, "") > +b.replace(/\D/g, "") ? 1 : -1});
+        }
+
+        function sortPricesToLow(arr){
+            arr.sort(function (a, b) {
+            if(typeof a.price === 'object'){
+                a = a.price.newUan;
+            } else if(typeof a.price === 'string'){
+                a = a.price;
+            } else {
+                alert("Некорректно заполнено поле цена");
+            }
+
+            if(typeof b.price === 'object'){
+                b = b.price.newUan;
+            } else if(typeof b.price === 'string'){
+                b = b.price;                
+            } else {
+                alert("Некорректно заполнено поле цена");
+            }
+            return +a.replace(/\D/g, "") > +b.replace(/\D/g, "") ? -1 : 1});
+        }
+        let filteredArr = [];
+        function filterIngredients(checkedIngredientes, arr){
+            filteredArr = [];
+            for(let i = 0; i < arr.length; i++){
+                if(checkIncludesIngredients(checkedIngredientes, arr[i].ingredients)){
+                    filteredArr.push(arr[i]);
+                }
+            }
+        };
+        function checkIncludesIngredients(checkedIngredientes, pizzaObj){
+            let counter = 0;
+            for(let i = 0; i < checkedIngredientes.length; i++){
+                if(checkedIngredientes[i] in pizzaObj){
+                    counter++;
+                }
+            }
+            if(counter === checkedIngredientes.length){
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        function clearProducts(){
+            let productsCont = document.querySelector('.products-list');
+            productsCont.innerHTML = '';
+        }
+        function renderProducts(arr, productsView){
+            let newHtml;
+            let productCard;
+            if(productsView === 'tile'){
+                productCard = `         
+                    <div class="product-card">
+                        <div class="product-card__img" style='background-image: url("%product-image%")'></div>
+                        <h4 class="product-card__name">%pizza-name%</h4>
+                        <div class="product-card__ingredients"><span class="product-card__ingredients-title">Состав: </span>%ingredients%</div>
+                        <div class="product-card__calorie"><span class="product-card__calorie-title">Калорийность: </span>%calorie%</div>
+                        <h5 class="product-card-price-tile"><span class="product-card__price-title">Цена: <span class="product-card__price">%price%</h5>
+                    </div>`;                
+            } else if (productsView === 'list'){
+                productCard = `         
+                    <div class="product-card--list">
+                        <div class="product-card__logo"></div>
+                        <div class="product-card__info">
+                            <h4 class="product-card__name product-card__name--list">%pizza-name%</h4>
+                            <h5 class="product-card-price-list">%price%</h5>
+                        </div>
+                    </div>`;                 
+            }
+
+
+            for(let i = 0; i < arr.length; i++){
+                newHtml = productCard.replace('%product-image%', arr[i].image);
+                newHtml = newHtml.replace('%pizza-name%', arr[i].name);
+                newHtml = newHtml.replace('%ingredients%', Object.values(arr[i].ingredients).join(", "));
+                newHtml = newHtml.replace('%calorie%', arr[i].calorie);
+                newHtml = newHtml.replace('%price%', arr[i].price);
+                document.querySelector('.products-list').insertAdjacentHTML("beforeend", newHtml);
+            }
+        }
+        let namesSelect = document.querySelector('.names-select');
+        let priceSelect = document.querySelector('.price-select');
+        //сортировка по названию вывод
+        namesSelect.addEventListener('change', function(){
+            if(priceSelect.value !== 'none'){
+                priceSelect.value = 'none';
+            }
+            if (this.value === 'namesToLow'){
+                if(filteredArr.length !== 0){
+                    sortNamesToLow(filteredArr);
+                    clearProducts();
+                    renderProducts(filteredArr, productsView);                    
+                } else if (filteredArr.length === 0){
+                    sortNamesToLow(arr);
+                    clearProducts();
+                    renderProducts(arr, productsView);
+                }
+            } else if (this.value === 'namesToHigh'){
+                if(filteredArr.length !== 0){
+                    sortNamesToHigh(filteredArr);
+                    clearProducts();
+                    renderProducts(filteredArr, productsView);                    
+                } else if (filteredArr.length === 0){
+                    sortNamesToHigh(arr);
+                    clearProducts();
+                    renderProducts(arr, productsView);
+                }
+            }
+        });
+        //сортировка по цене вывод
+        priceSelect.addEventListener('change', function(){
+            if(namesSelect.value !== 'none'){
+                namesSelect.value = 'none';
+            }
+            if (this.value === 'priceToHigh'){
+                if(filteredArr.length !== 0){
+                    sortPricesToHigh(filteredArr);
+                    clearProducts();
+                    renderProducts(filteredArr, productsView);                    
+                } else if (filteredArr.length === 0){
+                    sortPricesToHigh(arr);
+                    clearProducts();
+                    renderProducts(arr, productsView);
+                }
+
+            } else if (this.value === 'priceToLow'){
+                if(filteredArr.length !== 0){
+                    sortPricesToLow(filteredArr);
+                    clearProducts();
+                    renderProducts(filteredArr, productsView);                    
+                } else if (filteredArr.length === 0){
+                    sortPricesToLow(arr);
+                    clearProducts();
+                    renderProducts(arr, productsView);
+                }
+            }
+        });       
+
+        //фильтр по ингредиентам
+        let checkedIngredientes = [];
+        let checkedIngredientesUl = document.querySelector('.products-filter__ingredients-list');
+        let checkedIngredientesLi = document.querySelectorAll('.products-filter__ingredients-item');
+        checkedIngredientesUl.addEventListener('click', function(e){
+            if (e.target.classList == 'products-filter__checkbox'){
+                for (let i = 0; i < checkedIngredientesLi.length; i++){
+                    if(checkedIngredientesLi[i].querySelector('input').checked){
+                        checkedIngredientes.push(checkedIngredientesLi[i].querySelector('input').name);
+                    }
+                }
+                clearProducts();
+                if(namesSelect.value === 'namesToLow'){
+                    sortNamesToLow(arr);
+                } else if (namesSelect.value === 'namesToHigh'){
+                    sortNamesToHigh(arr);
+                } else if(priceSelect.value === 'priceToLow'){
+                    sortPricesToLow(arr);                   
+                } else if (priceSelect.value === 'priceToHigh'){
+                    sortPricesToHigh(arr);                     
+                }
+                filterIngredients(checkedIngredientes, arr);
+                renderProducts(filteredArr, productsView);
+                checkedIngredientes = [];
+            } else {};
+        });
+
+    </script>
+</body>
+</html>

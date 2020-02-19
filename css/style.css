@@ -52,17 +52,19 @@ ul{
 
 header{
     background-color: #3f1b63;
-    padding-top: 38px;
-    padding-bottom: 30px;
-    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .header__logo{
     position: relative;
     color: #eae5bd;
-    margin-top: 32px;
-    margin-left: 50px;
-    display: inline-block;
-    position: absolute;
+    margin-top: 45px;
+    width: 95px;
 }
 .header__logo:hover{
     color: #eae5bd;
@@ -71,14 +73,51 @@ header{
     content: '';
     position: absolute;
     top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
     background-image: url('../img/logo/pizza_PNG43984.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
+}
+.cart{
+    position: relative;
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 95px;
+}
+.cart::after{
+    position: absolute;
+    font-size: 30px;
+    color: #eae5bd;
+    content: "\e902";
+    font-family: 'icomoon';
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    transition: all .3s;
+}
+.cart:hover:after{
+    color: #60ca43;
+}
+.cart__amount{
+    background-color: #60ca43;
+    position: absolute;
+    z-index: 2;
+    right: -14px;
+    top: -2px;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart__amount.hidden{
+    display: none;
 }
 .header__title{
     text-align: center;
@@ -129,7 +168,7 @@ header{
     position: relative;
     margin-bottom: 10px;
     transform-style: preserve-3d;
-    height: 340px;
+    height: 395px;
 }
 .product-card__front{
     padding:10px;
@@ -166,7 +205,7 @@ header{
 .product-card__ingredients li, .product-card__ingredients ul{
     display: inline;
 }
-.prouct-card__add-ingredients{
+.prouct-card__add-ingredients, .product-card__add-cart{
     display: block;
     background-color: #60ca43;
     border-radius: 3px;
@@ -177,7 +216,7 @@ header{
     margin-top: 15px;
     transition: all .3s;
 }
-.prouct-card__add-ingredients:hover{
+.prouct-card__add-ingredients:hover, .product-card__add-cart:hover{
     background-color: #006900;
     color: #fff;
 }

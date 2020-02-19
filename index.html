@@ -19,8 +19,11 @@
             </div>
         </div>
         <header>
-            <a href="/" class="header__logo">Pizza Market</a>
-            <h2 class="header__title">Меню</h2>
+            <div class="container">
+                <a href="/" class="header__logo">Pizza Market</a>
+                <h2 class="header__title">Меню</h2>
+                <a href="#" class="cart"><span class='cart__amount hidden'></span></a>                
+            </div>
         </header>
         <main>
             <div class="container">
@@ -119,40 +122,40 @@
         let balyk = {name: "балык", price: 29, calories: 126, amount: 1};
         let pepperoni = {name: "пепперони", price: 28, calories: 115, amount: 1};
         let arr = [{name: "Баварская", ingredients: {huntingSausages, tomatoSauce, crimeanOnion, olives, mozzarella, oregano, parsley, pickledMushrooms},
-                    image: "img/bavarskaya.jpg"}, 
+                    image: "img/bavarskaya.jpg", inCart: 0}, 
                   {name: "Мясная", ingredients: {creamSauce, champignon, chickenLeg, pork,crimeanOnion, cherryTomato, mozzarella, parmesanCheese, oregano, basil},
-                   image: "img/meat.png"}, 
+                   image: "img/meat.png", inCart: 0}, 
                   {name: "Карбонара",  ingredients: {creamSauce, bacon, crimeanOnion, cherryTomato, mozzarella, parmesanCheese, oregano, basil},
-                   image: "img/carbonara.jpg"}, 
+                   image: "img/carbonara.jpg", inCart: 0}, 
                   {name: "Свит чили со свининой", ingredients: {sweetChiliSauce, pork, pineapples, bulgarianPepper,mozzarella, parmesanCheese, oregano, basil },
-                   image: "img/svitpork.jpg"}, 
+                   image: "img/svitpork.jpg", inCart: 0}, 
                   {name: "Чесночная с беконом", ingredients: {tomatoSauce, mozzarella,tomato, bacon, garlic,
-                  parmesanCheese, oregano, parsley }, image: "img/garlicbacon.jpg"}, 
+                  parmesanCheese, oregano, parsley }, image: "img/garlicbacon.jpg", inCart: 0}, 
                   {name: "Свит чили с курицей", ingredients: {sweetChiliSauce, chickenLeg, pineapples, bulgarianPepper,
-                  mozzarella, parmesanCheese, oregano, basil }, image: "img/svitchicken.jpg"}, 
+                  mozzarella, parmesanCheese, oregano, basil }, image: "img/svitchicken.jpg", inCart: 0}, 
                   {name: "Маринара", ingredients: {tomatoSauce, mozzarella,tomato, chickenLeg,
-                  parmesanCheese, oregano, parsley }, image: "img/marinara.jpg"},
+                  parmesanCheese, oregano, parsley }, image: "img/marinara.jpg", inCart: 0},
                   {name: "Квинта филона", ingredients: {tomatoSauce, mozzarella,tomato, bacon, chickenLeg,
-                  olives, parmesanCheese, oregano, parsley}, image: "img/kvintafilona.jpg"},  
+                  olives, parmesanCheese, oregano, parsley}, image: "img/kvintafilona.jpg", inCart: 0},  
                   {name: "С ананасами и ветчиной", ingredients: {tomatoSauce, mozzarella, ham, 
-                  olives, pineapples,  parmesanCheese, oregano }, image: "img/pinappleham.jpg"}, 
+                  olives, pineapples,  parmesanCheese, oregano }, image: "img/pinappleham.jpg", inCart: 0}, 
                   {name: "Итальяни", ingredients: {tomatoSauce,tomato, chickenLeg, mozzarella, ham, bacon, champignon, bulgarianPepper,  parmesanCheese, oregano,
-                    parsley }, image: "img/italiani.jpg"}, 
+                    parsley }, image: "img/italiani.jpg", inCart: 0}, 
                   {name: "Маргарита", ingredients: {tomatoSauce, mozzarella, tomato, oregano}, image: "img/margarita.jpg"}, 
                   {name: "Капричоза", ingredients: {tomatoSauce, mozzarella,tomato, ham,
-                  parmesanCheese, oregano, parsley }, image: "img/caprichosa.jpg"},  
+                  parmesanCheese, oregano, parsley }, image: "img/caprichosa.jpg", inCart: 0},  
                   {name: "С балыком и беконом", ingredients: {tomatoSauce, mozzarella,tomato,bacon, 
-                  balyk, parmesanCheese, oregano, parsley }, image: "img/balykbacon.jpg"},
+                  balyk, parmesanCheese, oregano, parsley }, image: "img/balykbacon.jpg", inCart: 0},
                   {name: "Реджина", ingredients: {creamSauce, champignon, chickenLeg,
-                  crimeanOnion, mozzarella, parmesanCheese, oregano }, image: "img/regina.jpg"},
+                  crimeanOnion, mozzarella, parmesanCheese, oregano }, image: "img/regina.jpg", inCart: 0},
                   {name: "Кальцоне с ветчиной", ingredients: {tomatoSauce, mozzarella,tomato, ham,
-                  crimeanOnion, oregano, parsley }, image: "img/calcioneham.jpg"}, 
+                  crimeanOnion, oregano, parsley }, image: "img/calcioneham.jpg", inCart: 0}, 
                   {name: "Неаполитана", ingredients: {huntingSausages, tomatoSauce, parmesanCheese, 
-                  tomato,  olives, mozzarella, oregano, parsley }, image: "img/napoli.jpg"}, 
+                  tomato,  olives, mozzarella, oregano, parsley }, image: "img/napoli.jpg", inCart: 0}, 
                   {name: "С курицей и ананасами", ingredients: {tomatoSauce, mozzarella, oregano,
-                  chickenLeg, pineapples}, image: "img/chickenpinapple.jpg"},
+                  chickenLeg, pineapples}, image: "img/chickenpinapple.jpg", inCart: 0},
                   {name: "Пепперони", ingredients: {tomatoSauce, mozzarella, oregano,
-                  pepperoni, pineapples}, image: "img/pepperoni.jpg"}];
+                  pepperoni, pineapples}, image: "img/pepperoni.jpg", inCart: 0}];
         
         let allIngredientes = {};
         function createAllIngredients(allIngredientes){
@@ -264,6 +267,10 @@
                     changeIngredientes.href = '#';
                     changeIngredientes.classList.add('prouct-card__add-ingredients');
                     changeIngredientes.innerText = 'Изменить состав пиццы';
+                    var addToCartProduct = document.createElement('a');
+                    addToCartProduct.href = '#';
+                    addToCartProduct.classList.add('product-card__add-cart');
+                    addToCartProduct.innerText = 'Добавить в корзину';
                     var productCardCalorie = document.createElement('div');
                     productCardCalorie.classList.add('product-card__calorie');
                     var productCardCalorieTitle = document.createElement('span');
@@ -298,6 +305,7 @@
                     cardSideFront.append(productCardName);
                     cardSideFront.append(productCardIngredients);
                     cardSideFront.append(changeIngredientes);
+                    cardSideFront.append(addToCartProduct);
                     cardSideFront.append(productCardCalorie);
                     cardSideFront.append(productCardPrice);
                     cardSideBack.append(productCardImg);
@@ -497,6 +505,52 @@
                     popUpContent.append(addIngredients);
                     popUpContent.append(ingredientsModalNotChecked);
         }
+        //cart
+        let carts = document.querySelectorAll('.product-card__add-cart');
+        let cartAmount = document.querySelector('.cart__amount');
+        function onLoadCartNumbers(){
+            let productNumbers = localStorage.getItem('cartNumbers');
+            if(productNumbers){
+                cartAmount.textContent = productNumbers;
+                cartAmount.classList.remove('hidden');
+            }
+        }
+        onLoadCartNumbers();
+        function cartNumbers(product){
+            let productNumbers = localStorage.getItem('cartNumbers');
+            productNumbers = parseInt(productNumbers);
+            if(productNumbers){
+                localStorage.setItem('cartNumbers', productNumbers + 1);
+                document.querySelector('.cart__amount').textContent = productNumbers + 1;
+            } else {
+                localStorage.setItem('cartNumbers', 1);
+                document.querySelector('.cart__amount').textContent = 1;
+                cartAmount.classList.remove('hidden');
+            }
+            setItems(product);
+        }
+        function setItems(product){
+            let cartItems = localStorage.getItem('productInCart');
+            cartItems = JSON.parse(cartItems);
+
+            if(cartItems != null){
+                if(cartItems[product.name] == undefined){
+                    cartItems = {
+                        ...cartItems,
+                        [product.name]: product
+                    }
+                }
+                cartItems[product.name].inCart +=1;
+
+            } else{
+                product.inCart = 1;
+                cartItems = {
+                    [product.name]: product
+                }
+            }
+
+            localStorage.setItem('productInCart', JSON.stringify(cartItems));
+        }
         //переворот карточки открытие попап
         let target;
         let allCardsTiles = document.querySelector('.products-list');
@@ -506,7 +560,7 @@
         let body = document.querySelector('body');
         if(productsView === 'tile'){
             allCardsTiles.addEventListener( 'click', function(e) {
-                if(e.target.closest('.product-card') && e.target.closest('.prouct-card__add-ingredients') === null){
+                if(e.target.closest('.product-card') && e.target.closest('.prouct-card__add-ingredients') === null && e.target.closest('.product-card__add-cart') === null){
                     e.target.closest('.product-card').classList.toggle('rotated');
                 } else if(e.target.closest('.prouct-card__add-ingredients')){
                     createAllIngredients(allIngredientes);
@@ -514,6 +568,12 @@
                     overlay.classList.add('visible');
                     body.classList.add('overflow');
                     renderPopup(target);
+                } else if(e.target.closest('.product-card__add-cart')){
+                    for(let i = 0; i< arr.length; i++){
+                        if(e.target.parentElement.querySelector('.product-card__name').innerText === arr[i].name){
+                            cartNumbers(arr[i]);
+                        }
+                    }
                 }
             });
         }
@@ -548,7 +608,6 @@
         function popUpClear(){
             popUpContent.innerText = '';
         }
-
     </script>
 </body>
 </html>
